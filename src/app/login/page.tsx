@@ -2,8 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { z } from 'zod';
-import { loginSchema, registerSchema } from '@/app/utils/valid';
-import { useAuth } from '../contexts/AuthContext';
+import { loginSchema, registerSchema } from '@/app/utils/vd';
+import { useAuth } from '../charactors/Auth'
 import React, { useEffect, useState } from 'react';
 import '@/app/login/style.css';
 
@@ -27,7 +27,6 @@ function CursorAnimationPage() {
                 display: 'block',
             });
 
-            // Hide cursor when mouse stops moving
             const mouseStopped = () => {
                 setCursorStyle((prev) => ({ ...prev, display: 'none' }));
             };
@@ -52,7 +51,6 @@ function CursorAnimationPage() {
     return (
         <>
             <div className="cursor" style={cursorStyle}></div>
-            {/* Rest of the LoginPage code here */}
         </>
     );
 }
@@ -137,7 +135,7 @@ export default function LoginPage() {
                 setTimeout(() => setIsSignUpMode(false), 2000);
             } else {
                 localStorage.setItem('session', JSON.stringify(data.session));
-                setUser(data.session); // Update auth context
+                setUser(data.session); 
                 router.push('/');
             }
         } catch (error) {
@@ -178,7 +176,6 @@ export default function LoginPage() {
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-6 px-8 py-4">
-                        {/* Username */}
                         <div className="relative">
                             <div className="relative">
                                 <i className="fas fa-user absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
@@ -197,7 +194,6 @@ export default function LoginPage() {
                             ))}
                         </div>
 
-                        {/* Email (SignUp) */}
                         {isSignUpMode && (
                             <div className="relative">
                                 <div className="relative">
@@ -216,7 +212,6 @@ export default function LoginPage() {
                             </div>
                         )}
 
-                        {/* Password */}
                         <div className="relative">
                             <div className="relative">
                                 <i className="fas fa-lock absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
@@ -240,7 +235,6 @@ export default function LoginPage() {
                             ))}
                         </div>
 
-                        {/* Submit Button */}
                         <button
                             type="submit"
                             disabled={isLoading}
@@ -256,7 +250,6 @@ export default function LoginPage() {
                             )}
                         </button>
 
-                        {/* Toggle */}
                         <p className="text-center text-gray-400 text-sm">
                             {isSignUpMode ? (
                                 <>
