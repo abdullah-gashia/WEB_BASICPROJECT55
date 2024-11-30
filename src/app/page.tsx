@@ -18,9 +18,7 @@ export default function MainPage() {
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-14rem)]">
             <div className="bg-[#222222] text-gray-200 rounded-lg p-8 w-full max-w-md shadow-md shadow-black">
-                <h2 className="text-2xl font-bold text-center mb-6 text-zinc-400">
-                    Welcome to Rock Paper Scissors
-                </h2>
+                
 
                 <div className="space-y-6">
                     {user ? (
@@ -32,7 +30,7 @@ export default function MainPage() {
                                 onClick={() => router.push('/rps')}
                                 className="w-full bg-[#444444] text-white py-3 rounded-md hover:bg-gray-700 transition-all font-semibold"
                             >
-                                Start Playing
+                                login
                             </button>
                         </div>
                     ) : (

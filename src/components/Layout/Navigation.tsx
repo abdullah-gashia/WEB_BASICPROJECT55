@@ -23,7 +23,6 @@ export default function Navigation({ isMobileMenuOpen, setIsMobileMenuOpen }: Na
 
     return (
         <>
-            {/* Mobile Navigation */}
             <div className={`lg:hidden bg-[#222222] border-b border-gray-700 menu-enter ${isMobileMenuOpen ? 'menu-enter-active' : ''}`}>
                 <div className="px-2 py-3 space-y-1">
                     {navigationItems.map((item) => {
@@ -49,7 +48,6 @@ export default function Navigation({ isMobileMenuOpen, setIsMobileMenuOpen }: Na
                 </div>
             </div>
 
-            {/* Desktop Navigation */}
             <nav className="hidden lg:block bg-[#222222] border-t border-b border-gray-700 px-4">
                 <div className="w-full max-w-[1536px] mx-auto">
                     <div className="flex space-x-1">
