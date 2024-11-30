@@ -12,7 +12,7 @@ type FormInputProps = {
     showPassword?: boolean;
 };
 
-export default function FormInput({
+export default function Inputt({
     type,
     placeholder,
     value,
