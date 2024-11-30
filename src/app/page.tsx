@@ -17,7 +17,7 @@ export default function MainPage() {
 
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-14rem)]">
-            <div className="bg-[#000000] text-gray-200 rounded-lg p-8 w-full max-w-md shadow-md ">
+            <div className="bg-[#9c1b1b] text-gray-200 rounded-lg p-8 w-full max-w-md shadow-md ">
                 <div className="space-y-6">
                     {user ? (
                         <div className="text-center space-y-4">
@@ -31,12 +31,9 @@ export default function MainPage() {
                         </div>
                     ) : (
                         <div className="space-y-4">
-                            <p className="text-center text-gray-400">
-                                Sign in to start playing and track your scores
-                            </p>
                             <button
                                 onClick={() => router.push('/login')}
-                                className="w-full bg-[#444444] text-white py-3 rounded-md hover:bg-gray-700 transition-all font-semibold flex items-center justify-center gap-2"
+                                className="w-full bg-[#ff2525] text-white py-3 rounded-md hover:bg-gray-700 transition-all font-semibold flex items-center justify-center gap-2"
                             >
                                 <LogIn className="w-5 h-5" />
                                 Sign In
