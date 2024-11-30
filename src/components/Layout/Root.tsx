@@ -40,7 +40,7 @@ export default function RootLayout({
     }
 
     return (
-        <div className="min-h-screen bg-[#333333] flex flex-col">
+        <div className="min-h-screen bg-[#fff] flex flex-col">
             <Header 
                 isMobileMenuOpen={isMobileMenuOpen}
                 setIsMobileMenuOpen={setIsMobileMenuOpen}
