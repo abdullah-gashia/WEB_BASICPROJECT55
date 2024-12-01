@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## GET MY WEBSITE 
 
 ```bash
+git clone https://github.com/abdullah-gashia/WEB_BASICPROJECT55.git
+
+cd WEB_BASICPROJECT55
+
+npm i
+
+# add .env file put this
+
+# DATABASE_URL="file:./dev.db"
+# JWT_SECRET="youAreGay"
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js (React.js framework)
+- TypeScript
+- JavaScript
+- CSS
+- prisma
+- fetch
+- ui
+- zod
+- bcrypt
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Login , Logout , Register
+- wait for to day
 
-To learn more about Next.js, take a look at the following resources:
+## ABOUT MUHAMMADSHAREEF
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<footer>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I NEED WORK 1 MILLION DOLLA PER MONTH.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</footer>
