@@ -4,8 +4,10 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 import { useRouter } from 'next/navigation';
 
 type User = {
+    id: any;
     username: string;
     role: string;
+    JacopScore: number;
 } | null;
 
 type AuthContextType = {
