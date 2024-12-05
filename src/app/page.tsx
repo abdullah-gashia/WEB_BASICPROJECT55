@@ -18,10 +18,11 @@ export default function MainPage() {
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-14rem)]">
             <div className="bg-[#9c1b1b] text-gray-200 rounded-lg p-8 w-full max-w-md shadow-md ">
+                
+                
                 <div className="space-y-6">
                     {user ? (
                         <div className="text-center space-y-4">
-                            
                             <div
                                 onClick={() => router.push('/')}
                                 className="w-full bg-[#000] text-white py-3 rounded-md hover:bg-gray-700 transition-all font-semibold"
@@ -40,10 +41,11 @@ export default function MainPage() {
                             </button>
                         </div>
                     )}
-
-                    
                 </div>
+
+
             </div>
         </div>
     );
 }
+
