@@ -22,12 +22,12 @@ export default function MainPage() {
                     {user ? (
                         <div className="text-center space-y-4">
                             
-                            <button
+                            <div
                                 onClick={() => router.push('/')}
                                 className="w-full bg-[#000] text-white py-3 rounded-md hover:bg-gray-700 transition-all font-semibold"
                             >
                                 Welcome
-                            </button>
+                            </div>
                         </div>
                     ) : (
                         <div className="space-y-4">
