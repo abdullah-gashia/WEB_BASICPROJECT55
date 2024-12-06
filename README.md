@@ -13,6 +13,8 @@ npm i
 # JWT_SECRET="youAreGay"
 
 npm run dev
+
+#something about schacn doesnot exit so you will install first 
 ```
 
 ## Technologies
