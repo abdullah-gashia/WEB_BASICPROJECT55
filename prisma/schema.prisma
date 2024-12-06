@@ -16,7 +16,8 @@ model User {
     email    String  @unique
     password String
     role     String  @default("user")
-    JacopScore  Score[]
+    scores  Score[]
+    LikeScore Int @default(0)
 }
 
 model Score {

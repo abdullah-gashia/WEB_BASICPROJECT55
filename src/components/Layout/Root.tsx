@@ -3,8 +3,6 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Header from './Header';
-import Navigation from './Navigation';
-import Footer from './Footer';
 
 export default function RootLayout({
     children,
@@ -48,18 +46,11 @@ export default function RootLayout({
                 setIsUserMenuOpen={setIsUserMenuOpen}
             />
 
-            <Navigation 
-                isMobileMenuOpen={isMobileMenuOpen}
-                setIsMobileMenuOpen={setIsMobileMenuOpen}
-            />
-
             <main className="flex-grow">
                 <div className="w-full max-w-[1536px] mx-auto p-4 animate-fadeIn">
                     {children}
                 </div>
             </main>
-
-            <Footer />
         </div>
     );
 }
