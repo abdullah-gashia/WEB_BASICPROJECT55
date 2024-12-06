@@ -222,7 +222,7 @@ export default function AdminTable({ users, onEdit, onDelete, setUsers }: AdminT
                                     onClick={() => handleSort('score')}
                                     className="flex items-center gap-1 ml-auto"
                                 >
-                                    Score
+                                    แต้มความรัก
                                     <SortIcon field="score" />
                                 </button>
                             </th>
