@@ -30,7 +30,7 @@ npm run dev
 ## Features
 
 - Login , Logout , Register
-- wait for to day
+- Warodom POP
 
 ## ABOUT MUHAMMADSHAREEF
 
