@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LogIn } from 'lucide-react';
 import { useAuth } from '@/app/charactors/Auth';
-import Game from '@/components/Game';
-import AdminTable from '@/components/AdminTable';
-import UserTable from '@/components/UserTable';
+import Game from '@/components/ClickAJ';
+import AdminTable from '@/components/Admin';
+import UserTable from '@/components/User';
 import EditUserForm from '@/components/EditUsers';
 import { toast } from "@/components/ui/use-toast";
 

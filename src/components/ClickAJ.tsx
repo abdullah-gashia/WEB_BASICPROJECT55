@@ -1,9 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Gamepad2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-import ChoiceButton from './Choice';
+import ChoiceButton from './RdJacop';
 import { 
     type Choice, 
     choices,
@@ -15,14 +14,14 @@ import {
 type GameState = {
     playerChoice: Choice | null;
     computerChoice: Choice | null;
-    result: 'win' | null;  // เปลี่ยนเป็น 'win' หรือ null
+    result: 'win' | null;  
     points: number;
-    totalPoints: number;  // คะแนนรวม
+    totalPoints: number;  
     isPlaying: boolean;
 };
 
 async function updateGameStats(result: 'win' | null, points: number) {
-    if (!result) return;  // ถ้า result เป็น null จะไม่บันทึกข้อมูล
+    if (!result) return;  
 
     const response = await fetch('/api/games/save', {
         method: 'POST',
@@ -43,7 +42,7 @@ export default function Game() {
         computerChoice: null,
         result: null,
         points: 0,
-        totalPoints: 0, // เริ่มต้นที่ 0
+        totalPoints: 0, 
         isPlaying: false
     });
     const { toast } = useToast();
@@ -56,27 +55,19 @@ export default function Game() {
             const result = determineWinner(choice, computerChoice);
             const points = calculatePoints(result);
 
-            // Save game result
+            
             await updateGameStats(result, points);
 
-            // คำนวณคะแนนรวม
+            
             const updatedTotalPoints = gameState.totalPoints + points;
 
-            // Update game state
             setGameState({
                 playerChoice: choice,
                 computerChoice,
                 result,
                 points,
-                totalPoints: updatedTotalPoints,  // อัปเดตคะแนนรวม
+                totalPoints: updatedTotalPoints,  
                 isPlaying: false
-            });
-
-            // Show toast notification
-            toast({
-                title: result === 'win' ? '🎉 Victory!' : '😔 Defeat!',
-                description: `You earned ${points} points`,
-                duration: 3000,
             });
 
         } catch (error) {
